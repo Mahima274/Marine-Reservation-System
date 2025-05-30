@@ -36,7 +36,6 @@ Run the Spring Boot application:
 mvn spring-boot:run
 Open your browser and go to http://localhost:8080 to access the application.
 
-yaml
 ### How to add locally:
 
 1. Open your project folder in VSCode.
@@ -44,8 +43,9 @@ yaml
 3. Paste the above content inside and save.
 4. Then run these commands in terminal:
 
-```bash
-git add README.md
-git commit -m "Add README.md with project details"
-git push
+
+Contact
+Developed by Mahima
+GitHub: https://github.com/Mahima274
+Email:lilamahimakumariakula@gmail.com
 
