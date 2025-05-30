@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ship Tickets</title>
+    <link rel="stylesheet" href="css/from.css">
+    <script>
+        function swapPorts() {
+            var fromStation = document.getElementById("fromStation");
+            var toStation = document.getElementById("toStation");
+
+            var temp = fromStation.value;
+            fromStation.value = toStation.value;
+            toStation.value = temp;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <h1>Book Ship Tickets</h1>
+            <div class="booking-form">
+                <form class="booking-form" action="shipselection.html" method="get">
+                    <label for="fromStation">From Station:</label>
+                    <select id="fromStation" name="fromStation" class="input-field" required>
+                        <option value="" disabled selected>Select a port</option>
+                        <option value="Port of Los Angeles">Port of Los Angeles</option>
+                        <option value="Port of New York">Port of New York</option>
+                        <option value="Port of Singapore">Port of Singapore</option>
+                        <option value="Port of Hamburg">Port of Hamburg</option>
+                        <option value="Port of Sydney">Port of Sydney</option>
+                        <option value="Port of Mumbai">Port of Mumbai</option>
+                    </select>
+                    <button type="button" class="swap-button" aria-label="Swap Stations" onclick="swapPorts()">⇆</button>
+                    <label for="toStation">To Station:</label>
+                    <select id="toStation" name="toStation" class="input-field" required>
+                        <option value="" disabled selected>Select a port</option>
+                        <option value="Port of Los Angeles">Port of Los Angeles</option>
+                        <option value="Port of New York">Port of New York</option>
+                        <option value="Port of Singapore">Port of Singapore</option>
+                        <option value="Port of Hamburg">Port of Hamburg</option>
+                        <option value="Port of Sydney">Port of Sydney</option>
+                        <option value="Port of Mumbai">Port of Mumbai</option>
+                    </select>
+                    <button type="submit" class="search-button" aria-label="Search Tickets">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

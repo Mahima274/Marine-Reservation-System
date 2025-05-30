@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Ship Adventure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #00aaff, #0044cc);
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .ship-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .ship-card {
+            background: #0066cc;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin: 15px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .ship-card:hover {
+            transform: translateY(-10px);
+            background: #005bb5;
+        }
+        .ship-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .ship-card h2 {
+            margin: 15px 0;
+            font-size: 1.5em;
+        }
+        .ship-card button {
+            background: #ffcc00;
+            color: #003366;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .ship-card button:hover {
+            background: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Choose Your Ship Adventure</h1>
+        <p>Select a ship below to begin your voyage!</p>
+    </header>
+    <div class="ship-container">
+        <div class="ship-card">
+            <img src="images/ship1.jpg" alt="Ship 1">
+            <h2>Ocean Explorer</h2>
+            <p>Embark on a luxury journey across the Atlantic.</p>
+            <button onclick="window.location.href='ship1.html'">Book Now</button>
+        </div>
+        <div class="ship-card">
+            <img src="images/ship2.jpg" alt="Ship 2">
+            <h2>Sea Voyager</h2>
+            <p>Sail through the Mediterranean in style.</p>
+            <button onclick="window.location.href='ship2.html'">Book Now</button>
+        </div>
+        <div class="ship-card">
+            <img src="images/ship3.jpg" alt="Ship 3">
+            <h2>Island Hopper</h2>
+            <p>Discover hidden gems of the Pacific islands.</p>
+            <button onclick="window.location.href='ship3.html'">Book Now</button>
+        </div>
+        <div class="ship-card">
+            <img src="images/ship4.jpg" alt="Ship 4">
+            <h2>Voyage Master</h2>
+            <p>Set sail on a majestic journey across the seas.</p>
+            <button onclick="window.location.href='ship4.html'">Book Now</button>
+        </div>
+        <div class="ship-card">
+            <img src="images/ship5.jpg" alt="Ship 5">
+            <h2>Atlantic Breeze</h2>
+            <p>Feel the ocean breeze on a spectacular Atlantic crossing.</p>
+            <button onclick="window.location.href='ship5.html'">Book Now</button>
+        </div>
+    </div>
+</body>
+</html>

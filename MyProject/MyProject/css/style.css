@@ -1,0 +1,278 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('../images/images.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.681);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;  
+    width: 100%;
+    max-width: 30%;  
+   
+}
+  
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #070707;
+}
+
+label {
+    font-size: 0.6rem;
+    margin-bottom: 5px;
+    display: block;
+    color: #020202; /* Color for label text */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(5, 5, 5, 0.875); /* Light border for visibility */
+    border-radius: 5px;
+    background: transparent; /* Make background transparent */
+    color: #181818f4; /* Text color to ensure visibility against background */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 500; /* Light bold text */
+}
+
+input::placeholder {
+    color: rgba(6, 6, 6, 0.899); /* Placeholder color */
+    font-weight: 500; /* Light bold for placeholder text */
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 153, 0);
+    color: #fff; /* White text for better contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600; /* Make button text bold */
+}
+
+.login-btn:hover {
+    background-color: darkorange;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #820404;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+.signup-box {
+    background-color: 
+    rgba(255, 255, 255, 0.681); /* Slightly transparent background for login box */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Set a max width for large screens */
+}
+
+/* New styles for Sign Up link */
+.signup-text {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #0f0e0e;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(126, 5, 70, 0.92);
+    color: #fff; /* White text for better contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600; /* Make button text bold */
+    font-weight: bold;
+}
+
+.signup-link {
+    color: rgb(0, 102, 255); /* Updated color for Sign Up link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Updated styles for 'Already have an account? Login' text */
+.login-text {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #000000; /* Black text color */
+}
+
+.login-link {
+    color: rgb(255, 69, 0); /* Updated color for Login link */
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.forgot-box {
+    background-color: rgba(255, 255, 255, 0.482); /* Slightly opaque background for the forgot password box */
+    padding: 30px; /* More padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Set a max width for larger screens */
+}
+
+.forgot-box h2 {
+    margin-bottom: 20px;
+    font-size: 1rem; /* Consistent heading size */
+    color: #0a0303; /* Consistent color */
+}
+
+.forgot-box label {
+    font-size: 0.9rem; /* Consistent font size for labels */
+    margin-bottom: 5px;
+    display: block;
+    color: #020202; /* Color for label text */
+}
+
+.forgot-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(15, 14, 14, 0.875); /* Light border for visibility */
+    border-radius: 5px;
+    background: transparent; /* Make background transparent */
+    color: #181818f4; /* Text color to ensure visibility against background */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 500; /* Light bold text */
+}
+
+.forgot-box input::placeholder {
+    color: rgba(6, 6, 6, 0.899); /* Placeholder color */
+    font-weight: 500; /* Light bold for placeholder text */
+}
+
+.forgot-box .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(74, 3, 16); /* Color for the button */
+    color: #fff; /* White text for better contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600; /* Make button text bold */
+}
+
+.forgot-box .submit-btn:hover {
+    background-color: rgb(255, 106, 0); /* Hover effect for the button */
+}
+
+.forgot-box .back-to-login {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #0909eb; /* Color for the back to login link */
+    font-weight: 500; /* Light bold for emphasis */
+    text-decoration: none;
+    font-weight: bold; /* No underline for the link */
+}
+
+.forgot-box .back-to-login:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.login-box, .signup-box, .forgot-box {
+    /* ... other styles ... */
+    border: 4px solid transparent;
+    border-radius: 10px;
+    animation: border-rotate 6s infinite linear;
+}
+
+@keyframes border-rotate {
+    0% {
+        border-image: linear-gradient(to right, #f00, #0ff, #00f) 1;
+    }
+    25% {
+        border-image: linear-gradient(to right, #0ff, #00f, #f00) 1;
+    }
+    50% {
+        border-image: linear-gradient(to right, #00f, #f00, #0ff) 1;
+    }
+    75% {
+        border-image: linear-gradient(to right, #f00, #0ff, #00f) 1;
+    }
+    100% {
+        border-image: linear-gradient(to right, #0ff, #00f, #f00) 1;
+    }
+}
+
+
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .login-box {
+        width: 90%;  /* Make the form take up more space on smaller screens */
+    }
+    
+    h2 {
+        font-size: 0.9rem;  /* Reduce font size */
+    }
+
+    .logo {
+        width: 80px;  /* Smaller logo for mobile */
+    }
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+    .login-box {
+        width: 100%;  /* Full width for small phones */
+    }
+
+    .login-btn {
+        font-size: 0.6rem; /* Adjust button size for smaller screens */
+    }
+}

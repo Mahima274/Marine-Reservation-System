@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #00aaff, #0044cc);
+            color: #fff;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .room-selection-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .room-card {
+            background: #0066cc;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin: 15px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .room-card:hover {
+            transform: translateY(-10px);
+            background: #005bb5;
+        }
+        .room-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .room-card h2 {
+            margin: 15px 0;
+            font-size: 1.5em;
+        }
+        .room-card p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .room-card button {
+            background: #ffcc00;
+            color: #003366;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .room-card button:hover {
+            background: #ff9900;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Select Your Room</h2>
+
+    <div class="room-selection-container">
+        <div class="room-card">
+            <img src="images/luxurysuite.jpg" alt="Luxury Suite">
+            <h2>Luxury Suite</h2>
+            <p>Enjoy the ultimate luxury experience with panoramic ocean views, a private balcony, and exclusive services.</p>
+            <button onclick="selectRoom('Luxury Suite')">Book Now</button>
+        </div>
+
+        <div class="room-card">
+            <img src="images/oceanview.jpg" alt="Ocean View">
+            <h2>Ocean View</h2>
+            <p>Relax in your spacious room with a stunning view of the ocean, perfect for a peaceful getaway.</p>
+            <button onclick="selectRoom('Ocean View')">Book Now</button>
+        </div>
+
+        <div class="room-card">
+            <img src="images/standardsuite.jpg" alt="Standard Cabin">
+            <h2>Standard Cabin</h2>
+            <p>Comfortable and cozy, ideal for travelers who prefer a more affordable, yet relaxing accommodation.</p>
+            <button onclick="selectRoom('Standard Cabin')">Book Now</button>
+        </div>
+    </div>
+
+    <script>
+        function selectRoom(roomType) {
+            localStorage.setItem('selectedRoom', roomType);
+            window.location.href = 'payment.html';
+        }
+    </script>
+
+</body>
+</html>

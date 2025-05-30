@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #1e90ff, #000080);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .confirmation-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .confirmation-box h1 {
+            margin-bottom: 20px;
+        }
+        .confirmation-box p {
+            font-size: 1.2em;
+        }
+        .confirmation-box button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ffcc00;
+            color: #003366;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .confirmation-box button:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-box">
+        <h1>Payment Confirmed!</h1>
+        <p>Suite Type: <span id="suiteType"></span></p>
+        <p>Total Cost: $<span id="totalCost"></span></p>
+        <p>Start Date: <span id="startDate"></span></p>
+        <p>Adults: <span id="numAdults"></span></p>
+        <p>Children: <span id="numChildren"></span></p>
+        <button onclick="window.location.href='ticket.html'">View Ticket</button>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const suiteType = localStorage.getItem('suiteType') || 'Not Selected';
+        const totalCost = localStorage.getItem('totalCost') || '0';
+        const startDate = localStorage.getItem('startDate') || 'Not Set';
+        const numAdults = localStorage.getItem('numAdults') || 0;
+        const numChildren = localStorage.getItem('numChildren') || 0;
+    
+        if (!suiteType || suiteType === 'Not Selected') {
+            alert('Suite type is missing. Please select a suite.');
+            window.location.href = 'roombooking.html'; // Redirect to room booking page
+            return;
+        }
+    
+        document.getElementById('suiteType').textContent = suiteType;
+        document.getElementById('totalCost').textContent = totalCost;
+        document.getElementById('startDate').textContent = startDate;
+        document.getElementById('numAdults').textContent = numAdults;
+        document.getElementById('numChildren').textContent = numChildren;
+    });
+    </script>
+</body>
+</html>
